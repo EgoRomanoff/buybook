@@ -1,0 +1,28 @@
+$enable-shadows: true;
+$body-bg: #fff;
+
+// $container-max-widths: (
+//   sm: 540px,
+//   md: 720px,
+//   lg: 960px,
+//   xl: 1140px,
+//   xxl: 1320px
+// );
+
+$theme-colors: (
+  'primary': #477507,
+  'secondary': #f3d250,
+  'success': #86c232,
+  'info': #833bec,
+  'warning': #c9a30d,
+  'danger': #eb5140,
+  'light': #ececec,
+  'dark': #2f3336,
+);
+
+$font-sizes: (
+  'xxl': 4rem,
+  1: 3rem,
+);
+
+@import 'bootstrap/scss/bootstrap.scss';
