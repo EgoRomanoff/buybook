@@ -1,13 +1,14 @@
+@import 'vars.scss';
+
 $enable-shadows: true;
 $body-bg: #fff;
-
-// $container-max-widths: (
-//   sm: 540px,
-//   md: 720px,
-//   lg: 960px,
-//   xl: 1140px,
-//   xxl: 1320px
-// );
+$body-color: #181818;
+$navbar-brand-margin-end: 1.5rem;
+$navbar-nav-link-padding-x: 1rem;
+$nav-pills-link-active-bg: #fff;
+$navbar-light-color: #181818;
+$navbar-light-hover-color: $c-primary;
+$navbar-light-active-color: $c-primary;
 
 $theme-colors: (
   'primary': #477507,
@@ -33,4 +34,4 @@ $position-values: (
   100: 100%
 );
 
-@import 'bootstrap/scss/bootstrap.scss';
+@import '/node_modules/bootstrap/scss/bootstrap.scss';

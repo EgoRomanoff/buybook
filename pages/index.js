@@ -1,26 +1,59 @@
 import Image from 'next/image'
-import { Container } from 'react-bootstrap'
-import cls from '../styles/Main.module.scss'
+import {
+  Container,
+  Form,
+  FormControl,
+  InputGroup,
+  Nav,
+  Navbar,
+  NavbarBrand,
+  NavItem,
+  NavLink,
+  Row } from 'react-bootstrap'
+import stl from '../styles/Main.module.scss'
+import logo from '../public/buybook-logo_full_light-theme.svg'
 
 export default function Home() {
   return (
     <>
-      <header className={ [cls.header,
-                          'bg-light',
-                          'fixed-top']
-                            .join(' ')}>
-        <Container className='h-100'>
-          <div className='header__inner
-                          d-flex
-                          flex-row
-                          align-items-center
-                          h-100'>
-            HEADER
-          </div>
+      <header className={ stl.header }>
+        <Container>
+          <Navbar className={ stl.header__navbar }>
+            <NavbarBrand href="#home">
+              <Image
+                  className={ stl.logo__img }
+                  src={ logo }
+                  alt='BuyBook logo' />
+            </NavbarBrand>
+            <Form className={ stl.header__search }>
+              <InputGroup>
+                <FormControl
+                    className={ stl.search__input }
+                    type='search'
+                    placeholder="Найти...">
+                </FormControl>
+              </InputGroup>
+            </Form>
+            <Nav
+                className={ stl.header__nav }
+                as='ul'
+                variant='pills'>
+                {/* defaultActiveKey="/page1"> */}
+              <NavItem as='li'>
+                <NavLink href='/page1'>Каталог</NavLink>
+              </NavItem>
+              <NavItem as='li'>
+                <NavLink href='/page2'>Корзина</NavLink>
+              </NavItem>
+              <NavItem as='li'>
+                <NavLink href='/page3'>Личный кабинет</NavLink>
+              </NavItem>
+            </Nav>
+          </Navbar>
         </Container>
       </header>
 
-      <main className={ [cls.main,
+      <main className={ [ stl.main,
                         'd-flex',
                         'flex-column',
                         'h-100',
@@ -32,7 +65,9 @@ export default function Home() {
 
           <div className='main__inner'>
 
-            <section className={ cls.greeting + ' d-flex align-items-center position-relative'}>
+            <section className={ [ stl.greeting,
+                                  'd-flex',
+                                  'align-items-center', 'position-relative'] }>
               <h1 className='fs-1
                             fw-normal
                             text-center

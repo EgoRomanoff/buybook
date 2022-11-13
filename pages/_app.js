@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+// import '../styles/vars.module.scss'
 import '../styles/customTheme.scss'
 import Head from 'next/head'
 
