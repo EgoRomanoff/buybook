@@ -6,8 +6,11 @@
   left: 0;
   right: 0;
   display: flex;
-  height: 60px;
+  height: 70px;
   background-color: $c-light;
+  color: $c-dark;
+  z-index: 1000;
+  box-shadow: 0px 5px 10px 15px white;
 
   &__navbar {
     height: 100%;
@@ -19,24 +22,90 @@
   }
 
   &__search {
-    margin-right: .5rem;
+    margin-right: .75rem;
     width: 100%;
-    max-width: 350px;
+    // max-width: 350px;
+  }
+
+  .logo__img {
+    width: 110px;
+  }
+
+  .search__input {
+    border-color: $c-success;
+
+    &:focus {
+      border-color: $c-primary;
+      outline: 1px solid $c-primary;
+      box-shadow: none;
+    }
   }
 }
 
-.search__input {
-  // border: none;
-}
-
-.logo__img {
-  width: 120px;
-}
-
 .main {
-  margin-top: 80px;
+  margin-top: 70px;
+  flex: 1 0 auto;
+
+  &__inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .greeting {
-  height: 300px;
+  position: relative;
+  height: 160px;
+  align-items: center;
+  margin-right: 0;
+  margin-left: 0;
+
+  &__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__title {
+    text-align: center;
+    flex: 1 1 auto;
+    font-weight: 400;
+
+    & .title_name {
+      color: $c-primary;
+      font-weight: 600;
+    }
+  }
+
+  &__book_1,
+  &__book_2 {
+    position: absolute;
+    height: auto;
+  }
+
+  &__book_1 {
+    width: 110px;
+    top: 15px;
+    left: 5%;
+  }
+
+  &__book_2 {
+    width: 120px;
+    bottom: 0;
+    right: 5%;
+  }
+}
+
+.footer {
+  margin-top: auto;
+  background-color: $c-dark;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
 }

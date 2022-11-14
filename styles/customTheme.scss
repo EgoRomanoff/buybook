@@ -3,8 +3,10 @@
 $enable-shadows: true;
 $body-bg: #fff;
 $body-color: #181818;
+$container-padding-x: 2.5rem;
+$grid-gutter-width: 2.5rem;
 $navbar-brand-margin-end: 1.5rem;
-$navbar-nav-link-padding-x: 1rem;
+$navbar-nav-link-padding-x: .75rem;
 $nav-pills-link-active-bg: #fff;
 $navbar-light-color: #181818;
 $navbar-light-hover-color: $c-primary;
@@ -23,7 +25,7 @@ $theme-colors: (
 
 $font-sizes: (
   'xxl': 4rem,
-  1: 3rem,
+  1: 2.5rem,
 );
 
 $position-values: (
@@ -34,4 +36,4 @@ $position-values: (
   100: 100%
 );
 
-@import '/node_modules/bootstrap/scss/bootstrap.scss';
+@import 'bootstrap/scss/bootstrap.scss';

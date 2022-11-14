@@ -1,6 +1,6 @@
 import '../styles/globals.css'
-// import '../styles/vars.module.scss'
 import '../styles/customTheme.scss'
+import 'bootstrap-icons/font/bootstrap-icons.scss'
 import Head from 'next/head'
 
 function MyApp({ Component, pageProps }) {
