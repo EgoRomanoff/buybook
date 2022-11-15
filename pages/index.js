@@ -72,39 +72,120 @@ export default function Home() {
 
       <main className={ [stl.main, 'py-3']
                          .join(' ') }>
-        <Container fluid="lg">
 
-          <Row as='section' className={ stl.greeting }>
-            <Col className={ stl.greeting__inner }>
-              <h1 className={[ stl.greeting__title, 'fs-1']
-                              .join(' ')}
-              >
-                Добро пожаловать<br/>на&nbsp;
-                <span className={stl.title_name}>
-                  BuyBook
-                </span>
-              </h1>
-              <Image
-                  className={ stl.greeting__book_1 }
-                  src={ bookImg1 }
-                  alt='Book'
-                  placeholder='blur' />
-              <Image
-                  className={ stl.greeting__book_2 }
-                  src={ bookImg2 }
-                  alt='Book'
-                  placeholder='blur' />
+        <Container
+            as='section'
+            fluid="lg"
+            className={ stl.greeting }
+        >
+          <h1 className={[ stl.greeting__title, 'fs-1']
+                          .join(' ')}
+          >
+            Добро пожаловать<br/>на&nbsp;
+            <span className={stl.title_name}>
+              BuyBook
+            </span>
+          </h1>
+          <Image
+              className={ stl.greeting__book_1 }
+              src={ bookImg1 }
+              alt='Book'
+              placeholder='blur' />
+          <Image
+              className={ stl.greeting__book_2 }
+              src={ bookImg2 }
+              alt='Book'
+              placeholder='blur' />
+        </Container>
+
+        <Container
+            as='section'
+            fluid="lg"
+            className={ stl.bestsellers }
+        >
+          <h3 className={ stl.bestsellers__title }>Лидеры продаж</h3>
+          <Row
+              as='ul'
+              className={ [stl.bestsellers__list, 'g-3', 'mt-3'].join(' ') }
+              xxs='2'
+              xs='3'
+              sm='4'
+          >
+            <Col as='li' className={ stl.bestsellers__item }>
+              <div className={ stl.item__imgWrapper }>
+                <Image
+                  className={ stl.item__img }
+                  src='/img/books/hawking.jpg'
+                  alt='Hawking Book'
+                  layout='fill'
+                  objectFit='contain'
+                />
+              </div>
+              <span className={ stl.item__price }>700</span>
+              <p className={ stl.item__description }>
+                <span className={ stl.desctiiption__author }>Стивен Хокинг</span>
+                <span className={ stl.desctiiption__name }>Краткая история Времени</span>
+              </p>
+            </Col>
+            <Col as='li' className={ stl.bestsellers__item }>
+              <div className={ stl.item__imgWrapper }>
+                <Image
+                  className={ stl.item__img }
+                  src='/img/books/hawking.jpg'
+                  alt='Hawking Book'
+                  layout='fill'
+                  objectFit='contain'
+                />
+              </div>
+              <span className={ stl.item__price }>700</span>
+              <p className={ stl.item__description }>
+                <span className={ stl.desctiiption__author }>Стивен Хокинг</span>
+                <span className={ stl.desctiiption__name }>Краткая история Времени</span>
+              </p>
+            </Col>
+            <Col as='li' className={ stl.bestsellers__item }>
+              <div className={ stl.item__imgWrapper }>
+                <Image
+                  className={ stl.item__img }
+                  src='/img/books/hawking.jpg'
+                  alt='Hawking Book'
+                  layout='fill'
+                  objectFit='contain'
+                />
+              </div>
+              <span className={ stl.item__price }>700</span>
+              <p className={ stl.item__description }>
+                <span className={ stl.desctiiption__author }>Стивен Хокинг</span>
+                <span className={ stl.desctiiption__name }>Краткая история Времени</span>
+              </p>
+            </Col>
+            <Col as='li' className={ stl.bestsellers__item }>
+              <div className={ stl.item__imgWrapper }>
+                <Image
+                  className={ stl.item__img }
+                  src='/img/books/hawking.jpg'
+                  alt='Hawking Book'
+                  layout='fill'
+                  objectFit='contain'
+                />
+              </div>
+              <span className={ stl.item__price }>700</span>
+              <p className={ stl.item__description }>
+                <span className={ stl.desctiiption__author }>Стивен Хокинг</span>
+                <span className={ stl.desctiiption__name }>Краткая история Времени</span>
+              </p>
             </Col>
           </Row>
-
         </Container>
+
       </main>
 
       <footer className={ stl.footer }>
         <Container fluid="lg">
-          <div className={ [stl.footer__inner, 'py-3']
-                            .join(' ') }>
-            FOOTER
+          <div
+              className={ [stl.footer__inner, 'py-3'].join(' ') }
+          >
+            © Copyright
           </div>
         </Container>
       </footer>
